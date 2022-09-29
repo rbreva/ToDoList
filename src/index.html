@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1 class="header_h1">Today’s To Do</h1>
+            <div class="action">
+                <div class="todocount"></div>
+                <img class="action__img" src="images/update.svg" alt="refresh" />
+            </div>
+        </div>
+
+        <form class="newtask">
+              <input class="newtask__input" type="text" name="newtask" placeholder="Add to your list...">
+              <button type="submit" class="newtask__btn"><img src="images/enter.svg" alt="enter" /></button>
+        </form>
+
+        <div class="tasks">
+            
+        </div>
+
+        <div class="clear">
+            <button type="button" class="clear__btn">Clear all completed</button>
+        </div>
+
+    </div>
+</body>
+</html>
