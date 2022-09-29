@@ -14,7 +14,7 @@ To Do list: list structure
 
 
 ## Live Demo
-[Live Demo Link] not available yet
+[Live Demo Link](https://rbreva.github.io/ToDoList/dist/)
 
 ### Prerequisites
 
