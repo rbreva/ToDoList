@@ -155,11 +155,26 @@ body {
 }
 
 .check {
-  padding: 0 0.5rem;
+  padding: 0 1rem;
+}
+
+.check__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .task__desc {
-  padding: 0 1rem;
+  width: 100%;
+  padding: 1.2rem 0.8rem;
+  text-align: left;
+}
+
+.task__input {
+  background-color: transparent;
+  border: none;
+  color: var(--grey500);
+  font-size: 1.4rem;
 }
 
 .complete {
@@ -170,6 +185,7 @@ body {
 .task__action {
   width: 5rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .task__action__move {
