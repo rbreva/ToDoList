@@ -1,7 +1,25 @@
-import { Task } from './task.js';
+/* eslint-disable */
+import { taskslist } from './taskslist.js';
+import { showTasks } from './showTasks.js';
+/* eslint-enable */
 
-const removeTask = () => {
-  Task.allTasks();
+const deselectAllTasks = () => {
+  const selTasks = document.querySelectorAll('.task__desc');
+  selTasks.forEach((task) => {
+    task.parentNode.classList.remove('active');
+    task.parentNode.querySelector('.task__action').innerHTML = '<img class="task__action__move" src="images/move.svg" alt="move" />';
+  });
 };
-/* eslint-disable import/prefer-default-export */
-export { removeTask };
+
+const removeTask = (index) => {
+  const trashBtn = document.querySelector('.task__action__trash');
+
+  trashBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    taskslist.splice(index, 1);
+    localStorage.setItem('tasksList', JSON.stringify(taskslist));
+    showTasks();
+  });
+};
+
+export { deselectAllTasks, removeTask };

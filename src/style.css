@@ -158,7 +158,8 @@ body {
   padding: 0 1rem;
 }
 
-.check__btn {
+.check__btn,
+.del__btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -207,4 +208,5 @@ body {
   color: var(--grey400);
   padding: 1.6rem;
   font-size: 1.4rem;
+  cursor: pointer;
 }

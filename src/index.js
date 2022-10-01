@@ -1,8 +1,8 @@
-import _ from 'lodash'; // eslint-disable-line
 import './style.css';
-import { Task } from './js/task.js';
-import { addTast } from './js/addTask.js';
+import { newTask, showTasks } from './js/addTask.js';
+import { clearAll } from './js/clearAll.js';
 
-addTast();
+newTask();
+clearAll();
 
-document.addEventListener('DOMContentLoaded', Task.showTasks);
+document.addEventListener('DOMContentLoaded', showTasks);

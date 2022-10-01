@@ -1,6 +1,16 @@
 import { Task } from './task.js';
+import { taskslist } from './taskslist.js';
+import { showTasks } from './showTasks.js';
 
-const addTast = () => {
+const addTask = (task) => {
+  const taskLength = taskslist.length;
+  task.index = taskLength + 1;
+  taskslist.push(task);
+  localStorage.setItem('tasksList', JSON.stringify(taskslist));
+  showTasks();
+};
+
+const newTask = () => {
   const addTaskBtn = document.querySelector('.newtask__btn');
 
   addTaskBtn.addEventListener('click', (e) => {
@@ -9,10 +19,10 @@ const addTast = () => {
 
     if (newtask.value) {
       const task = new Task(newtask.value, false, '');
-      Task.addTask(task);
+      addTask(task);
       newtask.value = '';
     }
   });
 };
-/* eslint-disable import/prefer-default-export */
-export { addTast };
+
+export { newTask, addTask, showTasks };
