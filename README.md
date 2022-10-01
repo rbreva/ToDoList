@@ -14,7 +14,7 @@ To Do list: list structure
 
 
 ## Live Demo
-[Live Demo Link] not available yet
+[Live Demo Link](https://rbreva.github.io/ToDoList/dist/)
 
 ### Prerequisites
 
@@ -32,6 +32,11 @@ npm install
 - Behance: [Behance](https://www.behance.net/rbreva)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/r-mauricio-mendoza-huerta-0782a9166/)
 
+### Desing in Figma
+
+- Figma Design: [Figma Mauricio Mendoza](https://www.figma.com/file/MmpPPJ49DkxPmHO3wYwveV/To-Do-List?node-id=1%3A2)
+- Feel free to use it and if you can add me in your README, Thanks.
+- The design is not mine, I have redesigned it from the original, but it can help you in your process.
 
 ## 🤝 Contributing
 
