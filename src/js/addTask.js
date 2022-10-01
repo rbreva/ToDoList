@@ -2,6 +2,14 @@ import { Task } from './task.js';
 import { taskslist } from './taskslist.js';
 import { showTasks } from './showTasks.js';
 
+const addTask = (task) => {
+  const taskLength = taskslist.length;
+  task.index = taskLength + 1;
+  taskslist.push(task);
+  localStorage.setItem('tasksList', JSON.stringify(taskslist));
+  showTasks();
+};
+
 const newTask = () => {
   const addTaskBtn = document.querySelector('.newtask__btn');
 
@@ -16,13 +24,5 @@ const newTask = () => {
     }
   });
 };
-
-const addTask = (task) => {
-  const taskLength = taskslist.length;
-  task.index = taskLength + 1;
-  taskslist.push(task);
-  localStorage.setItem('tasksList', JSON.stringify(taskslist));
-  showTasks();
-}
 
 export { newTask, addTask, showTasks };

@@ -1,23 +1,10 @@
+/* eslint-disable */
 import { selectTask } from './selectTask.js';
+/* eslint-enable */
 import { taskslist } from './taskslist.js';
 
 const tasksContainer = document.querySelector('.tasks');
 const tasksCounter = document.querySelector('.todocount');
-
-const showTasks = () => {
-  tasksContainer.innerHTML = '';
-
-  for (let i = 0; i < taskslist.length; i += 1) {
-    addTaskToList(taskslist[i]);
-  }
-
-  if (taskslist.length > 0) {
-    tasksCounter.innerHTML = '';
-    tasksCounter.append(taskslist.length);
-  }
-
-  selectTask();
-}
 
 const addTaskToList = (task) => {
   const taskDiv = document.createElement('div');
@@ -37,7 +24,7 @@ const addTaskToList = (task) => {
 
   const taskDesc = document.createElement('div');
   taskDesc.classList.add('task__desc');
-  
+
   const inputTask = document.createElement('input');
   inputTask.classList.add('task__input');
   if (task.completed === true) {
@@ -63,6 +50,21 @@ const addTaskToList = (task) => {
   taskDiv.appendChild(taskAction);
 
   tasksContainer.appendChild(taskDiv);
-}
+};
 
-export { showTasks, addTaskToList }
+const showTasks = () => {
+  tasksContainer.innerHTML = '';
+
+  for (let i = 0; i < taskslist.length; i += 1) {
+    addTaskToList(taskslist[i]);
+  }
+
+  if (taskslist.length > 0) {
+    tasksCounter.innerHTML = '';
+    tasksCounter.append(taskslist.length);
+  }
+
+  selectTask();
+};
+
+export { showTasks, addTaskToList };

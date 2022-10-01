@@ -1,4 +1,4 @@
-import { taskslist } from './taskslist.js';
+const tasksContainer = document.querySelector('.tasks');
 
 class Task {
   constructor(description, completed, index) {
@@ -43,8 +43,6 @@ class Task {
 
     tasksContainer.appendChild(taskDiv);
   }
-
 }
-
-
-export { Task }
+/* eslint-disable */
+export { Task };

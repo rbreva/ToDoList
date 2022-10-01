@@ -1,6 +1,6 @@
 import './style.css';
 import { newTask, showTasks } from './js/addTask.js';
-import { clearAll } from './js/clearAll.js'
+import { clearAll } from './js/clearAll.js';
 
 newTask();
 clearAll();

@@ -1,11 +1,12 @@
+/* eslint-disable */
 import { deselectAllTasks, removeTask } from './removeTask.js';
 import { editTask } from './editTask.js';
+/* eslint-enable */
 import { completeTask } from './completeTask.js';
 
 const selectTask = () => {
   const selTasks = document.querySelectorAll('.task__desc');
-  
-  selTasks.forEach((task, index) =>{
+  selTasks.forEach((task, index) => {
     task.addEventListener('click', () => {
       const action = task.parentNode.querySelector('.task__action');
       const inputTask = task.querySelector('.task__input');
@@ -23,9 +24,8 @@ const selectTask = () => {
       }
       editTask();
     });
-
   });
   completeTask();
-}
-
+};
+/* eslint-disable */
 export { selectTask };
